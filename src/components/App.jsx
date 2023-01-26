@@ -1,9 +1,12 @@
-import Counter from './Counter/Counter';
+// import Counter from './Counter/Counter';
+import FeedBack from './FeedBack/FeedBack';
 
 export const App = () => {
   return (
     <>
-      <Counter initialValue={10} />
+      <FeedBack />
+
+      {/* <Counter initialValue={10} /> */}
     </>
   );
 };

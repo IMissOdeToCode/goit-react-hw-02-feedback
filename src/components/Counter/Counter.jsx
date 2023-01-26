@@ -1,19 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+// import PropTypes from 'prop-types';
 
 import Value from './Value';
 import Controls from './Control';
 
 import css from './Counter.module.css';
 
-class Counter extends React.Component {
+class Counter extends Component {
   static defaultProps = {
-    initialValue: 0,
+    initialValue: 40,
   };
 
-  static propTypes = {
-    ///
-  };
+  // static propTypes = {
+  //   ///
+  // };
 
   state = { value: this.props.initialValue };
 
@@ -40,3 +40,5 @@ class Counter extends React.Component {
 }
 
 export default Counter;
+
+// Counter.propTypes = {};

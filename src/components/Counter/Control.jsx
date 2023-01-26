@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 const Controls = ({ onIncrement, onDecrement }) => (
   <div className="Counter__controls">

@@ -74,8 +74,6 @@ class App extends Component {
             </>
           }
         />
-
-        {/* <Counter initialValue={10} /> */}
       </>
     );
   }

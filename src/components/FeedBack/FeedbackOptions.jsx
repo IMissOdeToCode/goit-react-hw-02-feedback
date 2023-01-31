@@ -1,9 +1,9 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 // import css from '.module.css';
 
 const FeedbackOptions = ({ options, onClick }) => {
-  return options.map((option, index) => (
+  return options.map(option => (
     <button
       key={option}
       type="button"
@@ -17,3 +17,7 @@ const FeedbackOptions = ({ options, onClick }) => {
 };
 
 export default FeedbackOptions;
+FeedbackOptions.propTypes = {
+  option: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
+};

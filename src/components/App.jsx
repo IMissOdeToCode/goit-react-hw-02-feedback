@@ -6,6 +6,8 @@ import FeedbackOptions from './FeedBack/FeedbackOptions';
 import Statistics from './FeedBack/Statistics';
 import Notification from './FeedBack/Notification';
 
+import css from './FeedBack/FeedBack.module.css';
+
 class App extends Component {
   state = {
     good: 0,
@@ -46,34 +48,37 @@ class App extends Component {
 
     return (
       <>
-        <Section
-          title={'Please leave feedback'}
-          children={
-            <FeedbackOptions
-              options={options}
-              onClick={this.leaveVote.bind(this)}
-            />
-          }
-        />
-
-        <Section
-          title={'Statistics'}
-          children={
-            <>
-              {total > 0 ? (
-                <Statistics
-                  good={this.state.good}
-                  neutral={this.state.neutral}
-                  bad={this.state.bad}
-                  total={total}
-                  positivePercentage={positivePercentage}
+        <div className={css.wrapper}>
+          <Section
+            title={'Please leave feedback'}
+            children={
+              <div className={css.buttonsBlock}>
+                <FeedbackOptions
+                  options={options}
+                  onClick={this.leaveVote.bind(this)}
                 />
-              ) : (
-                <Notification message={'There is no feedback'} />
-              )}
-            </>
-          }
-        />
+              </div>
+            }
+          />
+          <Section
+            title={'Statistics'}
+            children={
+              <>
+                {total > 0 ? (
+                  <Statistics
+                    good={this.state.good}
+                    neutral={this.state.neutral}
+                    bad={this.state.bad}
+                    total={total}
+                    positivePercentage={positivePercentage}
+                  />
+                ) : (
+                  <Notification message={'There is no feedback'} />
+                )}
+              </>
+            }
+          />
+        </div>
       </>
     );
   }

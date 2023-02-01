@@ -1,13 +1,22 @@
 import PropTypes from 'prop-types';
 
+import css from './FeedBack.module.css';
+
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
     <>
-      <p>Good: {good}</p>
-      <p>Neutral: {neutral}</p>
-      <p>Bad: {bad}</p>
-      <p>Total: {total}</p>
-      <p>Positive feed back: {`${positivePercentage}%`}</p>
+      <div className={css.resultsBlock}>
+        <p className={css.results}>Good: {good}</p>
+        <p className={css.results}>Neutral: {neutral}</p>
+        <p className={css.results}>Bad: {bad}</p>
+      </div>
+
+      <div className={css.resultsBlock}>
+        <p className={css.results}>Total: {total}</p>
+        <p className={css.results}>
+          Positive feed back: {`${positivePercentage}%`}
+        </p>
+      </div>
     </>
   );
 };

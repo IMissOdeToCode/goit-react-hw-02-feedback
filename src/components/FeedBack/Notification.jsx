@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 
-const Notification = ({ message }) => <p>{message}</p>;
+import css from './FeedBack.module.css';
+
+const Notification = ({ message }) => <p className={css.results}>{message}</p>;
 
 export default Notification;
 
